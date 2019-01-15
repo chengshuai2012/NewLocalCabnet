@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_back_up"
+    android:orientation="vertical"
+    tools:context="com.link.cloud.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/manager"
+        android:layout_width="@dimen/code_image_view_width"
+        android:layout_height="@dimen/dialog_80_height"
+        android:background="@drawable/bg_orange_rectangle_corner_r20"
+        android:gravity="center"
+        android:text="@string/manager"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/margin_main"
+        android:layout_marginRight="@dimen/margin_left_register"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_36" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/main_back_down"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/chinese_welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_main"
+                    android:layout_marginTop="@dimen/margin_main"
+                    android:text="@string/well_use_string"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_36"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/chinese_welcome"
+                    android:layout_marginLeft="@dimen/margin_main"
+                    android:text="@string/welcome_to_use_sweat_locker"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_30"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/open_lock_width"
+                    android:layout_height="@dimen/open_lock_height"
+                    android:background="@drawable/bg_red_rectangle_corner_r20"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/open_lock"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/open_lock_img_height"
+                        android:layout_height="@dimen/open_lock_img_width"
+                        android:src="@drawable/open_lcok" />
+                    <TextView
+                        android:layout_marginTop="@dimen/margin_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_main"
+                        android:text="@string/open_string"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_36"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_main"
+
+                        android:text="@string/open_ark"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_30"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/open_lock_width"
+                    android:layout_height="@dimen/open_lock_height"
+                    android:layout_marginLeft="@dimen/text_size_60"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/return_lock"
+                    android:background="@drawable/bg_blue_rectangle_corner_r20">
+
+                    <ImageView
+                        android:layout_width="@dimen/open_lock_img_height"
+                        android:layout_height="@dimen/open_lock_img_width"
+                        android:src="@drawable/return_lock" />
+                    <TextView
+                        android:layout_marginTop="@dimen/margin_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_main"
+                        android:text="@string/queit_string"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_36"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_main"
+                        android:text="@string/queit_ark"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_30"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/bind"
+                android:layout_width="@dimen/activity_top_view_height"
+                android:layout_height="@dimen/dialog_80_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_white_rectangle_corner_r20"
+                android:gravity="center"
+                android:text="@string/bind"
+                android:layout_marginRight="@dimen/margin_left_register"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_36" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+    </RelativeLayout>

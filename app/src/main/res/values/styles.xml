@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="input_Number_style">
+        <item name="android:layout_height">@dimen/group_in_text_height</item>
+        <item name="android:layout_width">@dimen/group_in_text_height</item>
+        <item name="android:background">@drawable/button_bt_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/input_number</item>
+        <item name="android:textSize">@dimen/text_size_32</item>
+    </style>
+
+
+</resources>

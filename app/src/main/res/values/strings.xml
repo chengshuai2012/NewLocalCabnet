@@ -1,0 +1,131 @@
+<resources>
+    <string name="app_name">智能储物柜</string>
+    <string name="member">会员</string>
+    <string name="manager">管理员</string>
+    <string name="welcome_to_use_sweat_locker">Welcome To Use Sweat Locker</string>
+    <string name="well_use_string">欢迎使用智能储物柜</string>
+    <string name="open_string">开柜</string>
+    <string name="open_ark">Open Ark</string>
+    <string name="queit_string">退柜</string>
+    <string name="queit_ark">Return A Ark</string>
+    <string name="back_home">返回首页</string>
+    <string name="mode_one">指静脉验证开柜</string>
+    <string name="mode_one_hint">请将手指正确放置模块上方完成验证，听到“验证成功”设备开柜</string>
+    <string name="mode_two">二维码开柜</string>
+    <string name="mode_two_hint">请将小程序二维码在扫描枪扫描完成验证，听到“验证成功”设备开柜</string>
+    <string name="mode_three">方式3.密码口令开柜</string>
+    <string name="mode_three_hint">请点击界面选择已使用的柜号，输入自己的手机 后4位进行验证，听到“验证成功”设备开柜</string>
+    <string name="finger_string">请将手指正确放置模块上方完成验证，听到“验证成功”设备开柜</string>
+    <string name="sure_string">确认</string>
+    <string name="aready_open_string">号柜门已打开</string>
+    <string name="password_open">密码开柜</string>
+    <string name="lock_location">柜号位置</string>
+    <string name="last_string">上一步</string>
+    <string name="cancle_string">取消</string>
+    <string name="select_lock">选择柜号</string>
+    <string name="ok_string">完成</string>
+    <string name="vip_member">VIP租柜</string>
+    <string name="regular_member">临时柜</string>
+    <string name="use_vip_way">请使用以下VIP方式开柜</string>
+    <string name="initialization_successful">初始化成功</string>
+    <string name="mTts_stating_error">语言功能初始化失败</string>
+
+
+    <string name="vuene_login">指静脉登陆</string>
+    <string name="please_input_tel">请输入手机号</string>
+    <string name="please_input_password">请输入你的密码</string>
+    <string name="digitKeyppad_clear">清空</string>
+    <string name="digitKeyppad_delect">退格</string>
+    <string name="digitKeyppad_zero">0</string>
+    <string name="digitKeyppad_nine">9</string>
+    <string name="digitKeyppad_eight">8</string>
+    <string name="digitKeyppad_seven">7</string>
+    <string name="digitKeyppad_six">6</string>
+    <string name="digitKeyppad_five">5</string>
+    <string name="digitKeyppad_four">4</string>
+    <string name="digitKeyppad_three">3</string>
+    <string name="digitKeyppad_two">2</string>
+    <string name="digitKeyppad_one">1</string>
+
+
+    <string name="input_cabinet_nu">请输入你的手机号</string>
+
+
+
+
+    <string name="back">返回</string>
+    <string name="next">下一步</string>
+    <string name="cheack_phone">密码验证</string>
+    <string name="code_cheack">二维码验证</string>
+    <string name="code_scan">二维码扫描</string>
+    <string name="use_wechat_sacn">请使用微信扫描二维码完成验证</string>
+    <string name="cheack_fail">验证失败</string>
+    <string name="bind_again">请重新验证已绑定手指。</string>
+
+
+
+    <string name="move_finger">请移开手指,再次放置</string>
+    <string name="please_move_finger">请移开手指</string>
+    <string name="finger_success">手指验证成功</string>
+    <string name="code_success">二维码验证成功</string>
+    <string name="password_success">密码验证成功</string>
+    <string name="again_finger">请移开手指,再次放置...</string>
+    <string name="same_finger">验证错误，请放置同一根手指</string>
+    <string name="error_type" >设备类型错误</string>
+    <string name="open_success" >号柜门已打开</string>
+    <string name="device_id">设备ID:</string>
+    <string name="device_psw">设备密码</string>
+    <string name="please_device_psw">请输入设备密码</string>
+    <string name="confirm">确定</string>
+    <string name="back_system_main">返回系统主界面</string>
+    <string name="restart">重启APP</string>
+    <string name="back_app">返回程序主页</string>
+    <string name="back_system">返回系统设置</string>
+    <string name="close_door">门禁关闭</string>
+    <string name="open_door">门禁开启</string>
+    <string name="save_success">保存成功</string>
+    <string name="sorry_for_is_not_vip">抱歉，您非VIP柜子用户</string>
+    <string name="finish">操作完成后，请管理员点击“返回程序主页”</string>
+
+    <string name="remove_leave">号已退柜，请您带走所有随身物品并关好柜门</string>
+    <string name="close_lock">请您放入或带走随身物品并关好柜门</string>
+    <string name="name">姓名  </string>
+    <string name="phone">电话  </string>
+    <string name="open_finger">指静脉开柜</string>
+    <string name="open_xiaochengxu">二维码开柜</string>
+    <string name="open_code">二维码开柜</string>
+    <string name="open_nun">  号柜门已打开</string>
+    <string name="lock_open_success">请取走您的物品关好柜门</string>
+    <string name="inpu_num_pass">输入密码</string>
+    <string name="cabinet_not_found">您输入的柜号不存在</string>
+    <string name="please_input_right">请输入正确的柜号和密码</string>
+    <string name="openSuccess">开柜成功</string>
+    <string name="verify_agin">请重试</string>
+    <string name="please_save">请妥善保管密码</string>
+    <string name="cancel">取消</string>
+    <string name="open_lock">打开柜子</string>
+    <string name="please_input_lock_num">请输入柜号</string>
+    <string name="please_input_right_lock_num">请输入正确的柜号</string>
+    <string name="open_all">打开所有柜子</string>
+    <string name="login_fail">登陆失败,请确定账号或密码是否正确</string>
+    <string name="sd_permession">请打开设备内存卡读写权限</string>
+    <string name="psw_login">密码登陆</string>
+    <string name="psw_open">密码开柜</string>
+    <string name="handy_venue">指静脉登陆</string>
+    <string name="handy_venue_open">指静脉开柜</string>
+    <string name="handy_venue_intro">请验证已有的指静脉，用于管理员登录</string>
+    <string name="handy_venue_intro_open">请验证已有的指静脉，用于开柜</string>
+    <string name="manager_pwd">输入管理员密码</string>
+    <string name="no_manager">抱歉您非管理员</string>
+    <string name="error_net">网络异常</string>
+    <string name="parse_error">解析异常</string>
+    <string name="back_time_20">请输入柜号和密码，未点击确认20秒后返回程序主页</string>
+    <string name="back_time_10">请输入柜号和密码，未点击确认10秒后返回程序主页</string>
+    <string name="bind">绑定</string>
+    <string name="input_tel">输入手机号</string>
+    <string name="input_password">输入密码</string>
+    <string name="input_vuene">绑定指静脉</string>
+    <string name="bind_success">绑定成功</string>
+    <string name="image_fail">采图不清晰,请移开手指重新放置...</string>
+    <string name="wait_amoment">请求中,请稍后...</string>
+</resources>

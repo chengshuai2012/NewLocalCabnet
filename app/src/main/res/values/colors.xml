@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="red">#D71718</color>
+    <color name="light_gray">#E2E2E2</color>
+    <color name="almost_white">#F3F3F3</color>
+    <color name="translate">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_gray">#666666</color>
+    <color name="dark_red">#D71740</color>
+    <color name="black">#282828</color>
+    <color name="dark_black">#333333</color>
+    <color name="setting_text_black">#FF030212</color>
+    <color name="orange">#FF6637</color>
+    <color name="dark_gray">#999999</color>
+    <color name="text_red">#E61515</color>
+    <color name="colorbutton">#D71718</color>
+    <color name="color_black_333333">#333333</color>
+    <color name="color_gray_999999">#999999</color>
+    <color name="textColorPrimaryDark">#000000</color>
+    <color name="colorSecondary">#D0B183</color>
+    <color name="textColorPrimary">#1A1A1A</color>
+    <color name="textColorSecondary">#CDCDCD</color>
+    <color name="textColorPrimaryGray">#8E8E8E</color>
+    <color name="divider_color">#E3E6E9</color>
+    <color name="windowBackgroundLight">#FFFFFF</color>
+    <color name="windowBackground">#F0F0F0</color>
+    <color name="text_register">#666666</color>
+    <color name="color_f5f5f5">#F5F5F5</color>
+    <color name="color_FFD53347">#FFD53347</color>
+    <color name="color_FF9D1624">#FF9D1624</color>
+    <color name="color_009AC4">#009AC4</color>
+    <color name="color_4FD9DA">#4FD9DA</color>
+    <color name="color_C40024">#C40024</color>
+    <color name="color_FF2F4A">#FF2F4A</color>
+    <color name="color_4ED8D8">#4ED8D8</color>
+    <color name="color_E15900">#E15900</color>
+    <color name="color_FF922D">#FF922D</color>
+    <color name="common_bg">#1d1d1d</color>
+    <color name="color_DAA254">#DAA254</color>
+    <color name="color_F7D7A4">#F7D7A4</color>
+    <color name="color_1d1d1d">#1d1d1d</color>
+    <color name="color_ff5a381b">#ff5a381b</color>
+    <color name="color_EDC588">#EDC588</color>
+    <color name="color_D4D4D4">#D4D4D4</color>
+    <color name="color_454649">#454649</color>
+    <color name="color_C69F85">#C69F85</color>
+    <color name="color_7E583C">#7E583C</color>
+    <color name="color_ABB6C8">#ABB6C8</color>
+    <color name="color_0F0F0F">#0F0F0F</color>
+    <color name="color_FF3D3A39">#FF3D3A39</color>
+    <color name="color_FFD9B499">#FFD9B499</color>
+    <color name="color_FFC5CFDF">#FFC5CFDF</color>
+    <color name="color_FFABB6C8">#FFABB6C8</color>
+    <color name="open_lock">#FF7171 </color>
+    <color name="main_color">#FF7757 </color>
+    <color name="return_lock">#00C5D1  </color>
+
+
+
+
+
+</resources>
