@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/keyboard_width"
+    android:layout_height="@dimen/keyboard_height"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <EditText
+        android:id="@+id/input_tel"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/keyboard_edit_height"
+        android:layout_marginBottom="@dimen/keyboard_margin"
+        android:background="@drawable/border_lesson"
+        android:gravity="center"
+        android:hint="@string/please_input_lock_num"
+        android:textColorHint="@color/color_black_333333"
+        android:textSize="@dimen/text_size_36" />
+    <EditText
+    android:id="@+id/input_psw"
+    android:layout_width="0dp"
+        android:layout_weight="1"
+    android:layout_height="@dimen/keyboard_edit_height"
+        android:inputType="numberPassword"
+    android:layout_marginBottom="@dimen/keyboard_margin"
+    android:background="@drawable/border_lesson"
+    android:gravity="center"
+    android:hint="@string/input_password"
+    android:textColorHint="@color/color_black_333333"
+    android:textSize="@dimen/text_size_36" />
+
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bind_keypad_1_open"
+                android:layout_width="@dimen/keyboard_size"
+                android:layout_height="@dimen/keyboard_size"
+                android:layout_marginLeft="@dimen/margin_main_middle"
+                android:layout_marginRight="@dimen/margin_main"
+                android:background="@drawable/button_bt_bg"
+                android:gravity="center"
+                android:text="@string/digitKeyppad_one"
+                android:textColor="@color/colorbutton"
+                android:textSize="@dimen/text_size_36" />
+
+            <Button
+                android:id="@+id/bind_keypad_2_open"
+                android:layout_width="@dimen/keyboard_size"
+                android:layout_height="@dimen/keyboard_size"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:layout_marginRight="@dimen/margin_main"
+                android:background="@drawable/button_bt_bg"
+                android:gravity="center"
+                android:text="@string/digitKeyppad_two"
+                android:textColor="@color/colorbutton"
+                android:textSize="@dimen/text_size_36">
+
+            </Button>
+
+            <Button
+                android:id="@+id/bind_keypad_3_open"
+                android:layout_width="@dimen/keyboard_size"
+                android:layout_height="@dimen/keyboard_size"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:layout_marginRight="@dimen/margin_main"
+                android:background="@drawable/button_bt_bg"
+                android:gravity="center"
+                android:text="@string/digitKeyppad_three"
+                android:textColor="@color/colorbutton"
+                android:textSize="@dimen/text_size_36">
+
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/keyboard_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bind_keypad_4_open"
+                android:layout_width="@dimen/keyboard_size"
+                android:layout_height="@dimen/keyboard_size"
+                android:layout_marginLeft="@dimen/margin_main_middle"
+                android:layout_marginRight="@dimen/margin_main"
+                android:background="@drawable/button_bt_bg"
+                android:gravity="center"
+                android:text="@string/digitKeyppad_four"
+                android:textColor="@color/colorbutton"
+                android:textSize="@dimen/text_size_36"></Button>
+
+            <Button
+                android:id="@+id/bind_keypad_5_open"
+                android:layout_width="@dimen/keyboard_size"
+                android:layout_height="@dimen/keyboard_size"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:layout_marginRight="@dimen/margin_main"
+                android:background="@drawable/button_bt_bg"
+                android:gravity="center"
+                android:text="@string/digitKeyppad_five"
+                android:textColor="@color/colorbutton"
+                android:textSize="@dimen/text_size_36"></Button>
+
+            <Button
+                android:id="@+id/bind_keypad_6_open"
+                android:layout_width="@dimen/keyboard_size"
+                android:layout_height="@dimen/keyboard_size"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:layout_marginRight="@dimen/margin_main"
+                android:background="@drawable/button_bt_bg"
+                android:gravity="center"
+                android:text="@string/digitKeyppad_six"
+                android:textColor="@color/colorbutton"
+                android:textSize="@dimen/text_size_36"></Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/keyboard_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bind_keypad_7_open"
+                android:layout_width="@dimen/keyboard_size"
+                android:layout_height="@dimen/keyboard_size"
+                android:layout_marginLeft="@dimen/margin_main_middle"
+                android:layout_marginRight="@dimen/margin_main"
+                android:background="@drawable/button_bt_bg"
+                android:gravity="center"
+                android:text="@string/digitKeyppad_seven"
+                android:textColor="@color/colorbutton"
+                android:textSize="@dimen/text_size_36"></Button>
+
+            <Button
+                android:id="@+id/bind_keypad_8_open"
+                android:layout_width="@dimen/keyboard_size"
+                android:layout_height="@dimen/keyboard_size"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:layout_marginRight="@dimen/margin_main"
+                android:background="@drawable/button_bt_bg"
+                android:gravity="center"
+                android:text="@string/digitKeyppad_eight"
+                android:textColor="@color/colorbutton"
+                android:textSize="@dimen/text_size_36"></Button>
+
+            <Button
+                android:id="@+id/bind_keypad_9_open"
+                android:layout_width="@dimen/keyboard_size"
+                android:layout_height="@dimen/keyboard_size"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:layout_marginRight="@dimen/margin_main"
+                android:background="@drawable/button_bt_bg"
+                android:gravity="center"
+                android:text="@string/digitKeyppad_nine"
+                android:textColor="@color/colorbutton"
+                android:textSize="@dimen/text_size_36"></Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/keyboard_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bind_keypad_delect_open"
+                android:layout_width="@dimen/keyboard_size"
+                android:layout_height="@dimen/keyboard_size"
+                android:layout_marginLeft="@dimen/margin_main_middle"
+                android:layout_marginRight="@dimen/margin_main"
+                android:background="@drawable/button_bt_bg"
+                android:gravity="center"
+                android:text="@string/digitKeyppad_delect"
+                android:textColor="@color/colorbutton"
+                android:textSize="@dimen/text_size_36"></Button>
+
+            <Button
+                android:id="@+id/bind_keypad_0_open"
+                android:layout_width="@dimen/keyboard_size"
+                android:layout_height="@dimen/keyboard_size"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:layout_marginRight="@dimen/margin_main"
+                android:background="@drawable/button_bt_bg"
+                android:gravity="center"
+                android:text="@string/digitKeyppad_zero"
+                android:textColor="@color/colorbutton"
+                android:textSize="@dimen/text_size_36"></Button>
+
+            <Button
+                android:id="@+id/bind_keypad_ok_open"
+                android:layout_width="@dimen/keyboard_size"
+                android:layout_height="@dimen/keyboard_size"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:layout_marginRight="@dimen/margin_main"
+                android:background="@drawable/button_bt_bg"
+                android:gravity="center"
+                android:text="@string/digitKeyppad_clear"
+                android:textColor="@color/colorbutton"
+                android:textSize="@dimen/text_size_36"></Button>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

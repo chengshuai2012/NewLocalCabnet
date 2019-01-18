@@ -3,6 +3,7 @@ package com.link.cloud.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -12,6 +13,7 @@ import com.link.cloud.CabinetApplication;
 import com.link.cloud.R;
 import com.link.cloud.bean.AllUser;
 import com.link.cloud.bean.CabinetInfo;
+import com.link.cloud.listener.DialogCancelListener;
 import com.link.cloud.veune.DialogUtils;
 import com.link.cloud.veune.RxTimerUtil;
 
@@ -22,7 +24,9 @@ import io.realm.Realm;
 import io.realm.RealmChangeListener;
 import io.realm.RealmResults;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+import static android.support.constraint.Constraints.TAG;
+
+public class MainActivity extends Activity implements View.OnClickListener, DialogCancelListener {
 
     private RxTimerUtil rxTimerUtil;
     String phone;
@@ -31,6 +35,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     List<AllUser> managers = new ArrayList<>();
     private Realm realm;
     private DialogUtils dialogUtils;
+    boolean isOpen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,25 +61,35 @@ public class MainActivity extends Activity implements View.OnClickListener {
             }
         });
         dialogUtils = DialogUtils.getDialogUtils(this);
+        dialogUtils.setDialogCanceListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.bind:
-                startActivity(new Intent(this,BindActivity.class));
+                View okView = View.inflate(this,R.layout.verify_success,null);
+                dialogUtils.showPayOkDialog(okView,"aaaaaa");
+                //startActivity(new Intent(this, BindActivity.class));
                 break;
-                case R.id.return_lock:
+            case R.id.return_lock:
+                isOpen =false;
+                View veune_return_dialog = View.inflate(this, R.layout.veune_open_dialog, null);
+                dialogUtils.showOpenDialog(veune_return_dialog,isOpen);
+                isOpen = false;
+                break;
+            case R.id.open_lock:
+                isOpen = true;
+                View veune_open_dialog = View.inflate(this, R.layout.veune_open_dialog, null);
+                dialogUtils.showOpenDialog(veune_open_dialog,isOpen);
 
                 break;
-                case R.id.open_lock:
 
-                break;
-
-                case R.id.manager:
+            case R.id.manager:
                 rxTimerUtil.timer(1000, new RxTimerUtil.IRxNext() {
                     @Override
                     public void doNext(long number) {
+                        Log.e(TAG, "doNext: ");
                         int state = CabinetApplication.getVenueUtils().getState();
 
                         if (state == 3) {
@@ -90,13 +105,28 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         }
                     }
                 });
+                View manager = View.inflate(this, R.layout.veune_dialog, null);
+                dialogUtils.showManagerDialog(manager);
                 break;
         }
     }
-    public void openLock(String cabinet,String password){
 
+    public void openLock(String cabinet, String password) {
+        Log.e("openLock: ", cabinet+password);
     }
-    public void gotoSetting(String password){
+
+    public void gotoSetting(String password) {
+        Log.e("gotoSetting: ", password);
+    }
+
+    @Override
+    public void dialogCancel() {
+        rxTimerUtil.cancel();
+        Log.e("dialogCancel: ", "cancel");
+    }
+
+    @Override
+    public void onVenuePay() {
 
     }
 }

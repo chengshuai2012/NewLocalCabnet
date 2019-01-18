@@ -5,6 +5,7 @@
     android:orientation="vertical"
     >
     <RelativeLayout
+        android:paddingLeft="@dimen/margin_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/message_border"
@@ -12,44 +13,41 @@
         android:layout_marginTop="@dimen/margin_main_middle"
         >
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="@dimen/keyboard_edit_height"
-    android:textSize="@dimen/text_size_30"
-    android:gravity="center_vertical"
-    android:text="@string/open_finger"
-    android:textColor="@color/dark_black"
-    android:layout_alignParentRight="true"
-    android:id="@+id/venue_login_open"
-    android:layout_marginRight="@dimen/margin_main"
-    />
-    <View android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/almost_white"
-        android:layout_below="@+id/venue_login_open"
-        android:id="@+id/view" />
-
-        <include
-            android:id="@+id/keyborad"
-            layout="@layout/keyborad_no_verify_open"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/view"
+        <ImageView
+            android:layout_width="@dimen/pay_image_ok"
+            android:layout_height="@dimen/pay_image_ok"
+            android:src="@drawable/bind_success"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="8dp" />
+            android:id="@+id/pay_ol"
+            android:layout_marginTop="@dimen/keyboard_edit_height"
+            />
+        <TextView
+
+            android:layout_marginTop="@dimen/margin_main"
+            android:layout_width="@dimen/circleProgressBar_width"
+            android:layout_height="@dimen/keyboard_edit_height"
+            android:textSize="@dimen/text_size_56"
+            android:text="@string/open_success"
+            android:id="@+id/pay_ok"
+            android:layout_below="@+id/pay_ol"
+            android:gravity="center"
+            android:textColor="@color/dark_black"
+            android:layout_centerHorizontal="true"
+            />
         <TextView
             android:layout_marginTop="@dimen/margin_main"
             android:layout_width="@dimen/circleProgressBar_width"
             android:layout_height="@dimen/keyboard_edit_height"
-            android:textSize="@dimen/text_size_36"
-            android:text="@string/confirm"
-            android:id="@+id/confirm_open"
-            android:layout_below="@+id/keyborad"
-            android:gravity="center"
-            android:textColor="@color/almost_white"
+            android:textSize="@dimen/text_size_42"
+            android:text="@string/open_success"
+            android:id="@+id/back_home"
+            android:layout_below="@+id/pay_ok"
             android:background="@drawable/border_red_gradient"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:layout_centerHorizontal="true"
             />
+
     </RelativeLayout>
     <ImageView
         android:layout_width="@dimen/keyboard_edit_height"

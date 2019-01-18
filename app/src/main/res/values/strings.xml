@@ -111,10 +111,13 @@
     <string name="sd_permession">请打开设备内存卡读写权限</string>
     <string name="psw_login">密码登陆</string>
     <string name="psw_open">密码开柜</string>
+    <string name="psw_return">密码退柜</string>
     <string name="handy_venue">指静脉登陆</string>
     <string name="handy_venue_open">指静脉开柜</string>
+    <string name="handy_venue_return">指静脉退柜</string>
     <string name="handy_venue_intro">请验证已有的指静脉，用于管理员登录</string>
     <string name="handy_venue_intro_open">请验证已有的指静脉，用于开柜</string>
+    <string name="handy_venue_intro_close">请验证已有的指静脉，用于退柜</string>
     <string name="manager_pwd">输入管理员密码</string>
     <string name="no_manager">抱歉您非管理员</string>
     <string name="error_net">网络异常</string>
@@ -123,7 +126,7 @@
     <string name="back_time_10">请输入柜号和密码，未点击确认10秒后返回程序主页</string>
     <string name="bind">绑定</string>
     <string name="input_tel">输入手机号</string>
-    <string name="input_password">输入密码</string>
+    <string name="input_password">请输入密码</string>
     <string name="input_vuene">绑定指静脉</string>
     <string name="bind_success">绑定成功</string>
     <string name="image_fail">采图不清晰,请移开手指重新放置...</string>

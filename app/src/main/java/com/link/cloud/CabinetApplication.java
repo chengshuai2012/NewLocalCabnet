@@ -7,10 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
-
-import com.iflytek.cloud.Setting;
-import com.iflytek.cloud.SpeechConstant;
-import com.iflytek.cloud.SpeechUtility;
+;
 import com.link.cloud.activity.MainActivity;
 import com.link.cloud.veune.TimeService;
 import com.link.cloud.veune.Venueutils;
