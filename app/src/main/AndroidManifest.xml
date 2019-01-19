@@ -36,6 +36,15 @@
  <activity android:name=".activity.SettingActivity"
 
             />
+ <activity android:name=".activity.BindManagerActivity"
+     android:windowSoftInputMode="stateHidden"
+            /> <activity android:name=".activity.UserInfoManager"
+
+            /> <activity android:name=".activity.UseDetailActivity"
+
+            /> <activity android:name=".activity.LockInfoActivity"
+
+            />
 
         <receiver android:name=".veune.MyReceiver">
             <intent-filter android:priority="1000">

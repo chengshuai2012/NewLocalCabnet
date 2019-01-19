@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/adminmessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:background="@drawable/input_bg"
+                android:text="返回程序主页"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+            <Button
+                android:id="@+id/add_manager"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:background="@drawable/input_bg"
+                android:text="添加管理员信息"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/back_system_setting"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:background="@drawable/input_bg"
+                android:text="返回系统设置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+            <Button
+                android:id="@+id/back_system_main"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:background="@drawable/input_bg"
+                android:text="返回系统主界面"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/clear_all"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:background="@drawable/input_bg"
+                android:text="清除所有柜子"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+            <Button
+                android:id="@+id/searh_lock_info"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:background="@drawable/input_bg"
+                android:text="查看锁板信息"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/user_detail"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:background="@drawable/input_bg"
+                android:text="使用记录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+            <Button
+                android:id="@+id/open_lockPlate"
+
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:background="@drawable/input_bg"
+                android:text="打开所有"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/password_manager"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:background="@drawable/input_bg"
+                android:hint="点击输入新密码"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+            <Button
+                android:id="@+id/confirm_modify"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:background="@drawable/input_bg"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/clear_one"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:background="@drawable/input_bg"
+                android:hint="点击输入柜号"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+            <Button
+                android:id="@+id/clear_one_confirm"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:background="@drawable/input_bg"
+                android:text="清除该柜子"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/et_input"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:background="@drawable/input_bg"
+                android:digits="0123456789"
+                android:hint="点击输入柜号"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/open_cabinetnum"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:layout_marginLeft="@dimen/margin_main"
+                android:background="@drawable/input_bg"
+                android:text="打开该柜子"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/user_info"
+            android:layout_width="@dimen/code_image_view_height"
+            android:layout_height="@dimen/group_in_text"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_main"
+            android:layout_marginTop="50px"
+            android:background="@drawable/input_bg"
+            android:text="会员信息管理"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_30sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="锁板:"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+            <EditText
+                android:id="@+id/et_lockPlate"
+                android:layout_width="100px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="柜子数:"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+            <EditText
+                android:id="@+id/et_cabinet_count"
+                android:layout_width="100px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="开始线路号:"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+            <EditText
+                android:id="@+id/start_lock"
+                android:layout_width="100px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="开始柜号:"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+            <EditText
+                android:id="@+id/start_number"
+                android:layout_width="100px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cabinet_add"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/input_bg"
+                android:text="增加"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+
+            <Button
+                android:id="@+id/cabinet_delect"
+                android:layout_width="@dimen/circleProgressBar_width"
+                android:layout_height="@dimen/group_in_text"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/input_bg"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_30sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

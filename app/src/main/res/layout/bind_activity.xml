@@ -306,7 +306,7 @@
                     android:layout_height="@dimen/bind_height"
                     android:layout_marginTop="@dimen/margin_main"
                     android:background="@drawable/input_bg"
-                    android:text="@string/bind_success"
+                    android:text="@string/right_finger"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/bind_info"

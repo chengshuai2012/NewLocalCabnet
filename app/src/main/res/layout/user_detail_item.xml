@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:layout_marginLeft="@dimen/margin_main"
+        android:layout_marginRight="@dimen/margin_main"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/group_in_text_height"
+        android:gravity="center"
+       android:id="@+id/phone"
+        android:textColor="@color/almost_white"
+        android:textSize="@dimen/text_size_28" />   <TextView
+        android:layout_marginLeft="@dimen/margin_main"
+        android:layout_marginRight="@dimen/margin_main"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/group_in_text_height"
+        android:gravity="center"
+      android:id="@+id/time"
+        android:textColor="@color/almost_white"
+        android:textSize="@dimen/text_size_28" />
+
+
+    <TextView
+        android:layout_marginLeft="@dimen/margin_main"
+        android:layout_marginRight="@dimen/margin_main"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/group_in_text"
+        android:gravity="center"
+       android:id="@+id/delete"
+        android:background="@drawable/border_red_gradient"
+        android:text="删除"
+        android:textColor="@color/almost_white"
+        android:textSize="@dimen/text_size_28" />
+</LinearLayout>

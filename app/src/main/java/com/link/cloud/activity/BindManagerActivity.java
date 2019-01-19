@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Service;
 import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.graphics.Bitmap;
@@ -30,7 +29,6 @@ import com.link.cloud.R;
 import com.link.cloud.bean.AllUser;
 import com.link.cloud.veune.MdDevice;
 import com.link.cloud.veune.MdUsbService;
-import com.link.cloud.veune.ModelImgMng;
 import com.link.cloud.veune.RxTimerUtil;
 import com.link.cloud.veune.Venueutils;
 
@@ -45,7 +43,7 @@ import md.com.sdk.MicroFingerVein;
  * Created by 49488 on 2019/1/14.
  */
 
-public class BindActivity extends Activity implements View.OnClickListener, Venueutils.VenueCallBack {
+public class BindManagerActivity extends Activity implements View.OnClickListener, Venueutils.VenueCallBack {
     StringBuilder phoneNumber;
     EditText containerNo;
     boolean isPass = false;
@@ -320,7 +318,7 @@ public class BindActivity extends Activity implements View.OnClickListener, Venu
             Long time1 = new Long(createTime);
             String d = format.format(time1);
             final AllUser allUser = new AllUser();
-            allUser.setIsadmin(0);
+            allUser.setIsadmin(1);
             allUser.setFingerprint(msg);
             allUser.setPassword(pass);
             allUser.setCreateTime(d);

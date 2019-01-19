@@ -30,7 +30,7 @@ import md.com.sdk.MicroFingerVein;
  */
 
 public class Venueutils {
-    String Tag ="Venueutils";
+    String Tag = "Venueutils";
     public MdUsbService.MyBinder mdDeviceBinder;
     private byte[] img;
     Context context;
@@ -49,16 +49,13 @@ public class Venueutils {
     public interface VenueCallBack {
         void modelMsg(int state, String msg, Bitmap bitmap);
     }
-
-    public void initVenue(Context context, VenueCallBack callBack, Boolean bOpen) {
-        this.bOpen = bOpen;
-        this.context = context;
-        if (mdDeviceBinder == null) {
-            Intent intent = new Intent(context, MdUsbService.class);
-            context.bindService(intent, mdSrvConn, Service.BIND_AUTO_CREATE);
-        }
+    public  void initVenue(Context context, MdUsbService.MyBinder mdDeviceBinder,  Boolean bOpen,VenueCallBack callBack){
+        this.bOpen=bOpen;
+        this.context=context;
+        this.mdDeviceBinder =mdDeviceBinder;
         this.callBack = callBack;
     }
+
 
     public int getState() {
         if (!bOpen) {
@@ -81,14 +78,14 @@ public class Venueutils {
         if (state == 3) {
             //返回值state=3表检测到了双Touch触摸,返回1表示仅指腹触碰，返回2表示仅指尖触碰，返回0表示未检测到触碰
             if (lastTouchState == 3) {
-
+                return 4;
             }
             lastTouchState = 3;
             mdDeviceBinder.setDeviceLed(0, MdUsbService.getFvColorGREEN(), false);
             img = mdDeviceBinder.tryGetBestImg(5);
             if (img == null) {
-                Log.e(Tag,"get img failed,please try again");
-                callBack.modelMsg(1, context.getString(R.string.image_fail),null);
+                Log.e(Tag, "get img failed,please try again");
+                callBack.modelMsg(1, context.getString(R.string.image_fail), null);
             }
         }
 
@@ -99,16 +96,16 @@ public class Venueutils {
         float[] quaScore = {0f, 0f, 0f, 0f};
         int quaRtn = MdUsbService.qualityImgEx(img, quaScore);
         String oneResult = ("quality return=" + quaRtn) + ",result=" + quaScore[0] + ",score=" + quaScore[1] + ",fLeakRatio=" + quaScore[2] + ",fPress=" + quaScore[3];
-        Log.e("workModel: ",oneResult );
+        Log.e("workModel: ", oneResult);
         Bitmap bitmap = MdUsbService.chg2VisibleBmp(img);
         int quality = (int) quaScore[0];
         if (quality != 0) {
-            callBack.modelMsg(1, context.getString(R.string.image_fail),bitmap);
+            callBack.modelMsg(1, context.getString(R.string.image_fail), bitmap);
             return;
         }
         byte[] feature = MdUsbService.extractImgModel(img, null, null);
         if (feature == null) {
-            callBack.modelMsg(1, context.getString(R.string.image_fail),bitmap);
+            callBack.modelMsg(1, context.getString(R.string.image_fail), bitmap);
         } else {
             modOkProgress++;
             if (modOkProgress == 1) {//first model
@@ -116,7 +113,7 @@ public class Venueutils {
                 tipTimes[1] = 0;
                 modelImgMng.setImg1(img);
                 modelImgMng.setFeature1(feature);
-                callBack.modelMsg(1, context.getString(R.string.again_finger),bitmap);
+                callBack.modelMsg(1, context.getString(R.string.again_finger), bitmap);
             } else if (modOkProgress == 2) {//second model
                 ret = MdUsbService.fvSearchFeature(modelImgMng.getFeature1(), 1, img, pos, score);
                 if (ret && score[0] > MODEL_SCORE_THRESHOLD) {
@@ -126,26 +123,26 @@ public class Venueutils {
                         tipTimes[1] = 0;
                         modelImgMng.setImg2(img);
                         modelImgMng.setFeature2(feature);
-                        callBack.modelMsg(1, context.getString(R.string.again_finger),bitmap);
+                        callBack.modelMsg(1, context.getString(R.string.again_finger), bitmap);
                     } else {//第二次建模从图片中取特征值无效
                         modOkProgress = 1;
                         if (++tipTimes[0] <= 3) {
-                            callBack.modelMsg(2, context.getString(R.string.same_finger),bitmap);
+                            callBack.modelMsg(2, context.getString(R.string.same_finger), bitmap);
 
                         } else {//连续超过3次放了不同手指则忽略此次建模重来
                             modOkProgress = 0;
                             modelImgMng.reset();
-                            callBack.modelMsg(2, context.getString(R.string.same_finger),bitmap);
+                            callBack.modelMsg(2, context.getString(R.string.same_finger), bitmap);
                         }
                     }
                 } else {
                     modOkProgress = 1;
                     if (++tipTimes[0] <= 3) {
-                        callBack.modelMsg(2, context.getString(R.string.same_finger),bitmap);
+                        callBack.modelMsg(2, context.getString(R.string.same_finger), bitmap);
                     } else {//连续超过3次放了不同手指则忽略此次建模重来
                         modOkProgress = 0;
                         modelImgMng.reset();
-                        callBack.modelMsg(2, context.getString(R.string.same_finger),bitmap);
+                        callBack.modelMsg(2, context.getString(R.string.same_finger), bitmap);
                     }
                 }
             } else if (modOkProgress == 3) {//third model
@@ -156,7 +153,7 @@ public class Venueutils {
                         tipTimes[0] = 0;
                         tipTimes[1] = 0;
                         modelImgMng.setImg3(img);
-                        callBack.modelMsg(3, HexUtil.bytesToHexString(feature),bitmap);
+                        callBack.modelMsg(3, HexUtil.bytesToHexString(feature), bitmap);
                         modelImgMng.setFeature3(feature);
                         modelImgMng.reset();
                         //mdDeviceBinder.closeDevice(0);
@@ -164,17 +161,17 @@ public class Venueutils {
                     } else {//第三次建模从图片中取特征值无效
                         modOkProgress = 2;
                         if (++tipTimes[1] <= 3) {
-                            callBack.modelMsg(2, context.getString(R.string.same_finger),bitmap);
+                            callBack.modelMsg(2, context.getString(R.string.same_finger), bitmap);
                         }
                     }
                 } else {
                     modOkProgress = 2;
                     if (++tipTimes[1] <= 3) {
-                        callBack.modelMsg(2, context.getString(R.string.same_finger),bitmap);
+                        callBack.modelMsg(2, context.getString(R.string.same_finger), bitmap);
                     } else {//连续超过3次放了不同手指则忽略此次建模重来
                         modOkProgress = 0;
                         modelImgMng.reset();
-                        callBack.modelMsg(2, context.getString(R.string.same_finger),bitmap);
+                        callBack.modelMsg(2, context.getString(R.string.same_finger), bitmap);
                     }
                 }
             } else {
@@ -245,7 +242,6 @@ public class Venueutils {
     }
 
 
-
     private List<MdDevice> mdDevicesList = new ArrayList<MdDevice>();
     public static MdDevice mdDevice;
     private final int MSG_REFRESH_LIST = 0;
@@ -285,7 +281,7 @@ public class Venueutils {
                 mdDevList.add(mdDevice);
             }
         } else {
-            Log.e(Tag,"microFingerVein not initialized by MdUsbService yet,wait a moment...");
+            Log.e(Tag, "microFingerVein not initialized by MdUsbService yet,wait a moment...");
         }
         return mdDevList;
 
@@ -298,15 +294,15 @@ public class Venueutils {
             if (mdDeviceBinder != null) {
                 mdDeviceBinder.setOnUsbMsgCallback(mdUsbMsgCallback);
                 listManageH.sendEmptyMessage(MSG_REFRESH_LIST);
-                Log.e(Tag,"bind MdUsbService success.");
+                Log.e(Tag, "bind MdUsbService success.");
             } else {
-                Log.e(Tag,"bind MdUsbService failed.");
+                Log.e(Tag, "bind MdUsbService failed.");
             }
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            Log.e(Tag,"disconnect MdUsbService.");
+            Log.e(Tag, "disconnect MdUsbService.");
         }
     };
 
@@ -314,12 +310,12 @@ public class Venueutils {
         @Override
         public void onUsbConnSuccess(String usbManufacturerName, String usbDeviceName) {
             String newUsbInfo = "USB厂商：" + usbManufacturerName + "  \nUSB节点：" + usbDeviceName;
-            Log.e(Tag,newUsbInfo);
+            Log.e(Tag, newUsbInfo);
         }
 
         @Override
         public void onUsbDisconnect() {
-            Log.e(Tag,"USB连接已断开");
+            Log.e(Tag, "USB连接已断开");
         }
 
     };

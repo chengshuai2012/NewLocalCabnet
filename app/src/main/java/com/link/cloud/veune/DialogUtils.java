@@ -312,8 +312,9 @@ public class DialogUtils implements View.OnClickListener {
                 break;
 
             case R.id.confirm_open:
-                ((MainActivity) context).openLock(cabinetNo.toString(), passWord.toString());
                 dissMiss();
+                ((MainActivity) context).openLock(cabinetNo.toString(), passWord.toString());
+
                 break;
             case R.id.venue_login_open:
                 dissMiss();

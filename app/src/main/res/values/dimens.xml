@@ -5,7 +5,7 @@
     <dimen name="navigation_button_size">42dp</dimen>
     <dimen name="indicator_size">126px</dimen>
     <dimen name="margin_main">30px</dimen>
-    <dimen name="circleProgressBar_width">460px</dimen>
+    <dimen name="circleProgressBar_width">360px</dimen>
     <dimen name="margin_left_register">47px</dimen>
     <dimen name="dialog_padding">44px</dimen>
     <dimen name="dialog_imageView_height">344px</dimen>
@@ -30,6 +30,7 @@
     <dimen name="text_size_24">24px</dimen>
     <dimen name="text_size_22">22px</dimen>
     <dimen name="group_in_text_height">88px</dimen>
+    <dimen name="group_in_text">68px</dimen>
     <dimen name="dialog_80_height">80px</dimen>
     <dimen name="group_in_text_width">176px</dimen>
     <dimen name="text_size_36">36px</dimen>
@@ -81,7 +82,7 @@
     <dimen name="bind_width">600px</dimen>
     <dimen name="bind_height">127px</dimen>
 
-
+    <dimen name="text_size_30sp">30sp</dimen>
 
 
 </resources>

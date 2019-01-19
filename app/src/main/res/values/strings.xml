@@ -60,15 +60,19 @@
     <string name="code_scan">二维码扫描</string>
     <string name="use_wechat_sacn">请使用微信扫描二维码完成验证</string>
     <string name="cheack_fail">验证失败</string>
+    <string name="no_cabinet_found">抱歉没有找到您的柜子,请重试</string>
+    <string name="on_cabinet">没有剩余柜子</string>
     <string name="bind_again">请重新验证已绑定手指。</string>
 
 
 
     <string name="move_finger">请移开手指,再次放置</string>
     <string name="please_move_finger">请移开手指</string>
-    <string name="finger_success">手指验证成功</string>
+    <string name="finger_success">验证成功</string>
     <string name="code_success">二维码验证成功</string>
+    <string name="right_finger">请按图示放置手指</string>
     <string name="password_success">密码验证成功</string>
+    <string name="manager_open">管理员开柜</string>
     <string name="again_finger">请移开手指,再次放置...</string>
     <string name="same_finger">验证错误，请放置同一根手指</string>
     <string name="error_type" >设备类型错误</string>

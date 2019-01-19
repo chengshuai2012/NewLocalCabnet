@@ -39,7 +39,7 @@
             android:layout_width="@dimen/circleProgressBar_width"
             android:layout_height="@dimen/keyboard_edit_height"
             android:textSize="@dimen/text_size_42"
-            android:text="@string/open_success"
+            android:text="@string/finger_success"
             android:id="@+id/back_home"
             android:layout_below="@+id/pay_ok"
             android:background="@drawable/border_red_gradient"
